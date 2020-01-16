@@ -1,0 +1,359 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Wire Line
+	1200 1400 1500 1400
+Wire Wire Line
+	1200 1500 1600 1500
+Wire Wire Line
+	1200 1600 1650 1600
+Wire Wire Line
+	1200 1700 1600 1700
+Wire Wire Line
+	1200 1800 1500 1800
+Text Label 1200 1400 0    50   ~ 0
+GND
+Text Label 1200 1800 0    50   ~ 0
+GND
+Text Label 1200 1500 0    50   ~ 0
+VCC
+Text Label 1200 1700 0    50   ~ 0
+VCC
+Text Label 1200 1600 0    50   ~ 0
+ID_LED
+Wire Wire Line
+	1600 1500 1600 1700
+Wire Wire Line
+	1500 1800 1500 2350
+Connection ~ 1600 1500
+$Comp
+L Device:R R1
+U 1 1 5E1EB067
+P 2050 1950
+F 0 "R1" H 2120 1996 50  0000 L CNN
+F 1 "39K" H 2120 1905 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 1980 1950 50  0001 C CNN
+F 3 "~" H 2050 1950 50  0001 C CNN
+	1    2050 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 1500 2050 1500
+Connection ~ 2050 1500
+Wire Wire Line
+	2050 2350 1500 2350
+Connection ~ 2050 2350
+Wire Wire Line
+	3250 1650 3250 1750
+Wire Wire Line
+	3400 1650 3250 1650
+$Comp
+L Connector_Generic:Conn_01x02 J3
+U 1 1 5E1F2D81
+P 4900 1000
+F 0 "J3" H 4980 992 50  0000 L CNN
+F 1 "2.54mm Output" H 4980 901 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 4900 1000 50  0001 C CNN
+F 3 "~" H 4900 1000 50  0001 C CNN
+	1    4900 1000
+	1    0    0    -1  
+$EndComp
+Connection ~ 2650 2350
+Wire Wire Line
+	3250 2350 3250 2150
+Wire Wire Line
+	2650 2350 3250 2350
+Wire Wire Line
+	2650 1950 2650 2000
+Connection ~ 2650 1950
+Wire Wire Line
+	2950 1950 2650 1950
+$Comp
+L Transistor_FET:IRF3205 Q1
+U 1 1 5E1EFD60
+P 3150 1950
+F 0 "Q1" H 3355 1996 50  0000 L CNN
+F 1 "IRF3708" H 3355 1905 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown" H 3400 1875 50  0001 L CIN
+F 3 "http://www.irf.com/product-info/datasheets/data/irf3205.pdf" H 3150 1950 50  0001 L CNN
+	1    3150 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2650 2350 2050 2350
+Wire Wire Line
+	2650 2300 2650 2350
+Wire Wire Line
+	2650 1900 2650 1950
+$Comp
+L Device:R R2
+U 1 1 5E1EE96D
+P 2650 2150
+F 0 "R2" H 2720 2196 50  0000 L CNN
+F 1 "10K" H 2720 2105 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2580 2150 50  0001 C CNN
+F 3 "~" H 2650 2150 50  0001 C CNN
+	1    2650 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2650 1500 2050 1500
+Wire Wire Line
+	2650 1600 2650 1500
+$Comp
+L Device:D_Zener D1
+U 1 1 5E1E7D18
+P 2650 1750
+F 0 "D1" V 2604 1829 50  0000 L CNN
+F 1 "10V" V 2695 1829 50  0000 L CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 2650 1750 50  0001 C CNN
+F 3 "~" H 2650 1750 50  0001 C CNN
+	1    2650 1750
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x03 J2
+U 1 1 5E20381B
+P 4900 2400
+F 0 "J2" H 4980 2442 50  0000 L CNN
+F 1 "ID_LED" H 4980 2351 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x03_P2.54mm_Vertical" H 4900 2400 50  0001 C CNN
+F 3 "~" H 4900 2400 50  0001 C CNN
+	1    4900 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 5E205742
+P 1500 2600
+F 0 "#PWR04" H 1500 2350 50  0001 C CNN
+F 1 "GND" H 1505 2427 50  0000 C CNN
+F 2 "" H 1500 2600 50  0001 C CNN
+F 3 "" H 1500 2600 50  0001 C CNN
+	1    1500 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1500 2350 1500 2600
+Connection ~ 1500 2350
+$Comp
+L power:VCC #PWR03
+U 1 1 5E2060F8
+P 1600 1100
+F 0 "#PWR03" H 1600 950 50  0001 C CNN
+F 1 "VCC" H 1615 1273 50  0000 C CNN
+F 2 "" H 1600 1100 50  0001 C CNN
+F 3 "" H 1600 1100 50  0001 C CNN
+	1    1600 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 2300 4550 2300
+Wire Wire Line
+	4550 2300 4550 2250
+$Comp
+L power:VCC #PWR01
+U 1 1 5E206FEA
+P 4550 2250
+F 0 "#PWR01" H 4550 2100 50  0001 C CNN
+F 1 "VCC" H 4565 2423 50  0000 C CNN
+F 2 "" H 4550 2250 50  0001 C CNN
+F 3 "" H 4550 2250 50  0001 C CNN
+	1    4550 2250
+	1    0    0    -1  
+$EndComp
+Text GLabel 1650 1600 2    39   Input ~ 0
+ID_LED
+Text GLabel 4550 2500 0    39   Input ~ 0
+ID_LED
+Wire Wire Line
+	4550 2400 4700 2400
+Text GLabel 3400 1650 2    39   Input ~ 0
+OUTPUT_GND
+Text GLabel 4550 2400 0    39   Input ~ 0
+OUTPUT_GND
+Wire Wire Line
+	4550 1100 4700 1100
+$Comp
+L power:VCC #PWR05
+U 1 1 5E226D51
+P 4600 950
+F 0 "#PWR05" H 4600 800 50  0001 C CNN
+F 1 "VCC" H 4615 1123 50  0000 C CNN
+F 2 "" H 4600 950 50  0001 C CNN
+F 3 "" H 4600 950 50  0001 C CNN
+	1    4600 950 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 950  4600 1000
+Wire Wire Line
+	4600 1000 4700 1000
+Wire Wire Line
+	1500 1400 1500 1800
+Connection ~ 1500 1800
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5E231C24
+P 1150 700
+F 0 "#FLG0101" H 1150 775 50  0001 C CNN
+F 1 "PWR_FLAG" V 1150 827 50  0000 L CNN
+F 2 "" H 1150 700 50  0001 C CNN
+F 3 "~" H 1150 700 50  0001 C CNN
+	1    1150 700 
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:VCC #PWR0101
+U 1 1 5E232A96
+P 1150 700
+F 0 "#PWR0101" H 1150 550 50  0001 C CNN
+F 1 "VCC" V 1165 828 50  0000 L CNN
+F 2 "" H 1150 700 50  0001 C CNN
+F 3 "" H 1150 700 50  0001 C CNN
+	1    1150 700 
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1600 1100 1600 1500
+$Comp
+L power:GND #PWR0102
+U 1 1 5E23315A
+P 1150 850
+F 0 "#PWR0102" H 1150 600 50  0001 C CNN
+F 1 "GND" V 1155 722 50  0000 R CNN
+F 2 "" H 1150 850 50  0001 C CNN
+F 3 "" H 1150 850 50  0001 C CNN
+	1    1150 850 
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5E233679
+P 1150 850
+F 0 "#FLG0102" H 1150 925 50  0001 C CNN
+F 1 "PWR_FLAG" V 1150 977 50  0000 L CNN
+F 2 "" H 1150 850 50  0001 C CNN
+F 3 "~" H 1150 850 50  0001 C CNN
+	1    1150 850 
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2050 1500 2050 1800
+Wire Wire Line
+	2050 2100 2050 2350
+Wire Wire Line
+	4550 2500 4700 2500
+Text GLabel 4550 1100 0    39   Input ~ 0
+OUTPUT_GND
+$Comp
+L Device:LED D2
+U 1 1 5E20D943
+P 4150 3050
+F 0 "D2" H 4143 2795 50  0000 C CNN
+F 1 "LED" H 4143 2886 50  0000 C CNN
+F 2 "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 4150 3050 50  0001 C CNN
+F 3 "~" H 4150 3050 50  0001 C CNN
+	1    4150 3050
+	-1   0    0    1   
+$EndComp
+Text GLabel 4900 3050 2    39   Input ~ 0
+OUTPUT_GND
+Wire Wire Line
+	4900 3050 4750 3050
+$Comp
+L Device:R R3
+U 1 1 5E2126B8
+P 4600 3050
+F 0 "R3" H 4670 3096 50  0000 L CNN
+F 1 "1K2" H 4670 3005 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 4530 3050 50  0001 C CNN
+F 3 "~" H 4600 3050 50  0001 C CNN
+	1    4600 3050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4300 3050 4450 3050
+$Comp
+L power:VCC #PWR0103
+U 1 1 5E213339
+P 3900 3000
+F 0 "#PWR0103" H 3900 2850 50  0001 C CNN
+F 1 "VCC" H 3915 3173 50  0000 C CNN
+F 2 "" H 3900 3000 50  0001 C CNN
+F 3 "" H 3900 3000 50  0001 C CNN
+	1    3900 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 3050 4000 3050
+Wire Wire Line
+	3900 3000 3900 3050
+$Comp
+L Connector_Generic:Conn_01x06 J1
+U 1 1 5E25521F
+P 1000 1600
+F 0 "J1" H 918 2017 50  0000 C CNN
+F 1 "MagSafe 2 female" H 918 1926 50  0000 C CNN
+F 2 "magsafe-trigger:MagSafe_2_Female" H 1000 1600 50  0001 C CNN
+F 3 "~" H 1000 1600 50  0001 C CNN
+	1    1000 1600
+	-1   0    0    -1  
+$EndComp
+NoConn ~ 1200 1900
+Text Label 1200 1900 0    50   ~ 0
+SHIELD
+$Comp
+L Connector_Generic:Conn_01x01 J4
+U 1 1 5E1FF792
+P 4900 1550
+F 0 "J4" H 4980 1592 50  0000 L CNN
+F 1 "VCC" H 4980 1501 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_4.0x4.0mm_Drill2.0mm" H 4900 1550 50  0001 C CNN
+F 3 "~" H 4900 1550 50  0001 C CNN
+	1    4900 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J5
+U 1 1 5E2000BD
+P 4900 1850
+F 0 "J5" H 4980 1892 50  0000 L CNN
+F 1 "GND" H 4980 1801 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_4.0x4.0mm_Drill2.0mm" H 4900 1850 50  0001 C CNN
+F 3 "~" H 4900 1850 50  0001 C CNN
+	1    4900 1850
+	1    0    0    -1  
+$EndComp
+Text GLabel 4550 1850 0    39   Input ~ 0
+OUTPUT_GND
+$Comp
+L power:VCC #PWR02
+U 1 1 5E20028F
+P 4550 1500
+F 0 "#PWR02" H 4550 1350 50  0001 C CNN
+F 1 "VCC" H 4565 1673 50  0000 C CNN
+F 2 "" H 4550 1500 50  0001 C CNN
+F 3 "" H 4550 1500 50  0001 C CNN
+	1    4550 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 1500 4550 1550
+Wire Wire Line
+	4550 1550 4700 1550
+Wire Wire Line
+	4700 1850 4550 1850
+$EndSCHEMATC
