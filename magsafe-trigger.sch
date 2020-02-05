@@ -356,4 +356,6 @@ Wire Wire Line
 	4550 1550 4700 1550
 Wire Wire Line
 	4700 1850 4550 1850
+Text Label 2950 1950 2    50   ~ 0
+GATE
 $EndSCHEMATC
