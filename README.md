@@ -6,7 +6,7 @@ Based on info from [Macbook charger teardown from Ken Shirriff's blog](http://ww
 
 ### Schematic
 
-![schematic-fs8](schematic-fs8.png)
+![schematic-fs8](images/schematic-fs8.png)
 
 ### BOM
 
@@ -37,10 +37,22 @@ ID_LED pin is connected to a chip inside the the male connector. It is normally 
 
 ### PCB Layout
 
-![pcb-fs8](pcb-fs8.png)
+![pcb-fs8](images/pcb-fs8.png)
 
 MagSafe jack footprint is based on manual measurements and probably needs tweaking for proper fit. 
 
 ### PCB rendering
 
-![pcb-render-fs8](pcb-render-fs8.png)
+![pcb-render-fs8](images/pcb-render-fs8.png)
+
+### Assembly
+
+![assembly-1-parts](images/assembly-1-parts.jpg)
+
+![assembly-2-assembled](images/assembly-2-assembled.jpg)
+
+### Powered
+
+Plugging in a 45 W MagSafe 2 Power Adapter shows 15 V open circuit.
+
+![powered](images/powered.jpg)
